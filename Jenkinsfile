@@ -4,20 +4,13 @@ pipeline {
     stages {
         stage ("Build Backend") {
             steps {
-                sh "cd MERN-TODO"
-                sh "cd todo-backend"
-                sh "npm install"
-                sh "node app.js"
+                sh "ls"
             }
         }
 
         stage ("Build Frontend") {
             steps {
                 sh "ls"
-                sh "cd MERN-TODO"
-                sh "cd todo-fronted"
-                sh "npm install"
-                sh "npm start"
             }
         }
     }
