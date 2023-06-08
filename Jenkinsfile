@@ -5,16 +5,14 @@ pipeline {
         stage ("Build Backend") {
             steps {
             sh "cd todo-backend"
-            sh "npm install"
-            sh "node app.js"
+            sh "ls"
             }
         }
 
         stage ("Build Frontend") {
             steps {
                 sh "cd todo-fronted"
-                sh "npm install"
-                sh "npm start"
+                sh "ls"
             }
         }
     }
