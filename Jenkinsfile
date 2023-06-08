@@ -7,19 +7,21 @@ pipeline {
                 sh script:'''
                     cd todo-backend
                     npm install
-                    BUILD_ID=dontKillMe node app.js &
+                    cd ..
+                    cd todo-fronted
+                    npm install
                 '''
             }
         }
 
-        stage ("Build Frontend") {
-            steps {
-                sh script:'''
-                    cd todo-fronted
-                    npm install
-                    BUILD_ID=dontKillMe npm start &
-                '''
-            }
-        }
+        // stage ("Build Frontend") {
+        //     steps {
+        //         sh script:'''
+        //             cd todo-fronted
+        //             npm install
+        //             BUILD_ID=dontKillMe npm start &
+        //         '''
+        //     }
+        // }
     }
 }
