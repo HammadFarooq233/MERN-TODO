@@ -4,10 +4,11 @@ pipeline {
     stages {
         stage ("Build Backend") {
             steps {
-                sh "ls"
-                sh "cd todo-backend"
-                sh "ls"
-                sh "npm install"
+                sh script:'''
+                    ls
+                    cd todo-backend
+                    ls
+                '''
             }
         }
 
