@@ -7,7 +7,7 @@ pipeline {
                 sh script:'''
                     cd todo-backend
                     npm install
-                    node app.js
+                    BUILD_ID=dontKillMe node app.js &
                 '''
             }
         }
@@ -17,7 +17,7 @@ pipeline {
                 sh script:'''
                     cd todo-fronted
                     npm install
-                    npm start
+                    BUILD_ID=dontKillMe npm start &
                 '''
             }
         }
