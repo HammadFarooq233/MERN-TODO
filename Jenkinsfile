@@ -5,7 +5,7 @@ pipeline {
         stage ("Build Backend") {
             steps {
                 sh "ls"
-                cd "todo-backend"
+                sh "cd todo-backend"
             }
         }
 
